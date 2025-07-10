@@ -1,0 +1,83 @@
+{
+  "cascade": {
+    "model": "claude-3.5-sonnet",
+    "temperature": 0.7,
+    "max_tokens": 4000,
+    "context_length": 16000
+  },
+  "rules": {
+    "global_rules_file": ".windsurf/rules/global_rules.md",
+    "activation_mode": "always_on",
+    "max_rules_length": 12000,
+    "rule_files": [
+      ".windsurf/rules/frontend_rules.md",
+      ".windsurf/rules/backend_rules.md", 
+      ".windsurf/rules/docker_rules.md"
+    ]
+  },
+  "workflows": {
+    "auto_load": true,
+    "workflow_directory": ".windsurf/workflows",
+    "default_workflows": [
+      "app_generation.md",
+      "debugging.md"
+    ]
+  },
+  "memories": {
+    "enable_memory_system": true,
+    "memory_directory": ".windsurf/memories",
+    "auto_update": true,
+    "retention_days": 30
+  },
+  "brains": {
+    "knowledge_base": ".windsurf/brains",
+    "auto_load": true,
+    "brain_files": [
+      "project_context.md",
+      "tech_stack_knowledge.md"
+    ]
+  },
+  "project_settings": {
+    "language": "typescript",
+    "framework": "full-stack",
+    "ui_library": "radix-ui",
+    "styling": "tailwindcss",
+    "backend": "express",
+    "database": "postgresql",
+    "orm": "drizzle"
+  },
+  "development": {
+    "hot_reload": true,
+    "auto_save": true,
+    "format_on_save": true,
+    "lint_on_save": true,
+    "type_check": true
+  },
+  "code_generation": {
+    "style": "functional",
+    "patterns": ["react-hooks", "typescript-strict", "error-boundaries"],
+    "include_tests": false,
+    "include_docs": true,
+    "mobile_optimized": true
+  },
+  "ai_assistance": {
+    "context_awareness": "full",
+    "file_tracking": true,
+    "terminal_tracking": true,
+    "clipboard_tracking": false,
+    "suggestion_mode": "aggressive",
+    "auto_complete": true
+  },
+  "debugging": {
+    "enable_debug_mode": true,
+    "log_level": "info",
+    "performance_monitoring": true,
+    "error_tracking": true
+  },
+  "deployment": {
+    "docker_support": true,
+    "container_registry": "docker.io",
+    "deployment_platforms": ["vercel", "railway", "render"],
+    "environment_configs": ["development", "staging", "production"]
+  }
+}
